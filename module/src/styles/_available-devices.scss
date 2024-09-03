@@ -10,6 +10,7 @@
         display: grid;
         gap: 24px;
         grid-template-columns: repeat(4, 1fr);
+        list-style-type: none;
 
         &__item {
             text-align: center;
@@ -19,12 +20,20 @@
                 margin-bottom: 24px;
             }
 
-            li {
-                list-style-type: none;
-            }
-
             img {
                 max-width: 100%;
+            }
+
+            .text {
+                list-style-type: none;
+                padding: 0;
+                text-align: center;
+            }
+
+            .text li {
+                margin-bottom: 8px;
+                display: inline-block;
+                width: 100%;
             }
         }
     }
