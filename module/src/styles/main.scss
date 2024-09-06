@@ -1,4 +1,5 @@
 @use 'variaveis';
+@use 'header';
 @use 'hero';
 @use 'shows';
 @use 'plans';
@@ -23,6 +24,7 @@
     border: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -71,7 +73,9 @@ body {
 }
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
@@ -79,11 +83,33 @@ body {
     background-color: variaveis.$buttonColor;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$buttonColor;
 
     &:hover {
         cursor: pointer;
+        background-color: lighten(variaveis.$buttonColor, 3%);
+    }
+
+    &--secondary {
+        background-color: variaveis.$buttonSecundaryColor;
+        border-color: variaveis.$buttonSecundaryColor;
+
+        &:hover {
+            background-color: lighten(variaveis.$buttonSecundaryColor, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$buttonDarkColor, 0.8);
+        border-color: variaveis.$secundaryTextColor;
+
+        &:hover {
+            background-color: variaveis.$secundaryTextColor;
+            color: variaveis.$backgroundColor;
+        }
     }
 }
 
