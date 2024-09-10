@@ -10,6 +10,7 @@
 
     &__questions {
         list-style: none;
+        padding: 0;
 
         &__item {
             background-color: variaveis.$faqItemColor;
