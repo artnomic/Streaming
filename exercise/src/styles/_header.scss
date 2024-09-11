@@ -1,0 +1,126 @@
+@use 'variaveis';
+
+.header {
+
+    &__information {
+        background-color: variaveis.$headerInformationColor;
+        color: variaveis.$mainTextColor;
+        display: flex;
+        height: 80px;
+        padding: 8px 80px;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            a {
+                color: variaveis.$mainTextColor;
+            }
+        }
+
+        &__list {
+            padding: 8px 36px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+
+            &__item {
+                margin: 8px;
+
+                a {
+                    text-decoration: none;
+                    color: variaveis.$mainTextColor;
+                    font-weight: bold;
+
+                    p {
+                        display: inline;
+                        margin-left: 3.5px;
+                        text-decoration: underline;
+                    }
+                }
+
+                &:last-child {
+                    background-color: variaveis.$whatsappButtonLinkColor;
+                    height: 30px;
+                    width: 168px;
+                    text-align: center;
+                    border-radius: 8px;
+                    padding-top: 2px;
+
+                    &:hover {
+                        background-color: variaveis.$headerContainerMenuColor;
+
+                        a {
+                            color: variaveis.$headerInformationColor;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    &__container {
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: variaveis.$headerContainerMenuColor;
+        color: variaveis.$headerInformationColor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__menu {
+            padding: 8px 36px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+            &__item {
+                padding: 8px 27px;
+
+                &:hover {
+                    color: variaveis.$headerContainerMenuColor;
+                    background-color: variaveis.$headerInformationColor;
+                    transition: all .2s ease, visibility 0s;
+                    padding: 8px 27px;
+                    border-radius: 16px;
+                }
+            }
+        }
+
+        &__support {
+            padding: 8px 36px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            align-items: center;
+
+            &__item {
+                padding: 8px 27px;
+
+                a {
+                    text-decoration: none;
+                    color: variaveis.$headerInformationColor;
+                }
+
+                &:first-child {
+                    background-color: variaveis.$headerContainerSupportColor;
+
+                    p,
+                    i {
+                        color: variaveis.$headerContainerSupportTextColor;
+                        font-weight: 900;
+                    }
+
+                    p {
+                        display: inline;
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
