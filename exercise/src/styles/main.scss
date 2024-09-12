@@ -1,5 +1,6 @@
 @use 'variaveis';
 @use 'header';
+@use 'hero';
 
 @import url(https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap);
 
@@ -70,41 +71,23 @@ body {
 
 .button {
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
-    height: 60px;
-    font-size: 18px;
     color: variaveis.$mainTextColor;
     background-color: variaveis.$youtubeButtonLinkColor;
     text-transform: uppercase;
-    border-radius: 4px;
-    text-decoration: none;
+    border-radius: 8px;
     padding: 8px 14px;
     letter-spacing: 1px;
     border: 1px solid variaveis.$youtubeButtonLinkColor;
 
     &:hover {
         cursor: pointer;
-        background-color: lighten(variaveis.$youtubeButtonLinkColor, 3%);
-    }
-
-    &--secondary {
-        background-color: variaveis.$youtubeButtonLinkColor;
-        border-color: variaveis.$youtubeButtonLinkColor;
-
-        &:hover {
-            background-color: lighten(variaveis.$youtubeButtonLinkColor, 3%);
-        }
-    }
-
-    &--dark {
-        background-color: rgba(variaveis.$youtubeButtonLinkColor, 0.8);
-        border-color: variaveis.$youtubeButtonLinkColor;
-
-        &:hover {
-            background-color: variaveis.$youtubeButtonLinkColor;
-            color: variaveis.$youtubeButtonLinkColor;
-        }
+        background-color: variaveis.$headerInformationColor;
+        color: variaveis.$backgroundColor;
+        border: 1px solid variaveis.$headerInformationColor;
     }
 }
