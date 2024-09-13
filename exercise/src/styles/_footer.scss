@@ -1,0 +1,38 @@
+@use 'variaveis';
+
+.footer {
+    background-color: variaveis.$headerInformationColor;
+
+    &__container {
+
+        &__menu {
+            max-width: 386px;
+            padding: 50px;
+
+            &__logo {
+                margin-bottom: 25px;
+            }
+
+            &__info {
+                color: variaveis.$mainTextColor;
+            }
+
+            .button {
+                margin-top: 25px;
+
+                a {
+                    text-decoration: none;
+                    color: variaveis.$mainTextColor;
+                }
+
+                &:hover {
+                    background-color: variaveis.$mainTextColor;
+
+                    a {
+                        color: variaveis.$headerInformationColor;
+                    }
+                }
+            }
+        }
+    }
+}
